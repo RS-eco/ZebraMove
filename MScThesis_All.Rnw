@@ -1,0 +1,220 @@
+\documentclass[12pt,a4paper, twoside, english]{article}
+\usepackage[left=2.6cm,top=2cm,right=2cm,bottom=2cm,nohead]{geometry}
+\usepackage{pdfpages}
+\begin{document}
+
+\includepdf[pages={-}]{MScThesis_Main.pdf}
+
+\begin{small}
+
+<<read_chunk, echo=FALSE>>=
+knitr::read_chunk('RCode.R')
+@
+
+\subsubsection*{Set markdown options}
+
+<<markdown_options, echo=TRUE>>=
+@
+
+\subsubsection*{Set global options}
+
+<<global_options>>=
+@
+
+\subsubsection*{Functions}
+
+<<functions>>=
+@
+
+\subsubsection*{Read and clean movement data}
+
+<<clean_move>>=
+@
+
+\subsubsection*{Summary of movement data}
+
+<<summary>>=
+@
+
+\subsubsection*{GADM \& Cities data}
+
+<<studyarea>>=
+@
+
+\subsubsection*{WDPA data}
+
+<<wdpa>>=
+@
+
+\subsubsection*{Worldclim data}
+
+<<worldclim>>=
+@
+
+\subsubsection*{Fences}
+
+<<fence>>=
+@
+
+\subsubsection*{Plotting movement data}
+
+<<move_plot>>=
+@
+
+\subsubsection*{Manual segmentation}
+
+<<segmentation>>=
+@
+
+\subsubsection*{Create goal raster layer}
+
+<<goal>>=
+@
+
+\subsubsection*{Corridor Analysis}
+
+<<corridor>>=
+@
+
+\subsubsection*{GIMMS NDVI Analysis}
+
+<<gimms>>=
+@
+
+\subsubsection*{SRTM}
+
+<<srtm30>>=
+@
+
+\subsubsection*{Landsat Analysis}
+
+<<landsat_pathrow>>=
+@
+
+<<landsat_times>>=
+@
+
+<<landsat>>=
+@
+
+<<landsat_mosaick>>=
+@
+
+<<ls_timeseries>>=
+@
+
+\subsubsection*{MODIS Landcover Data}
+
+<<modis_tiles>>=
+@
+
+<<mlc>>=
+@
+
+<<mlc_plot>>=
+@
+
+\subsubsection*{MODIS VI Data}
+
+<<modis_vi>>=
+@
+
+% MODIS KEN files from 2008 are Version 005, not 006.
+
+\subsubsection*{MODIS Surface Reflectance}
+
+% Note: Quality removal is still missing.
+
+<<modis_sur_refl>>=
+@
+
+\subsubsection*{Vegetation Indices}
+
+% Note: MODIS Bands have a different order to Landsat (b1=RED (LS-b3), b2=NIR (LS-b4), b3=BLUE (LS-b1), b4=GREEN (LS-b2), b5=NIR2 (LS-b4-5), b6=SWIR1 (LS-b5), b7=SWIR2 (LS-b7))
+
+<<modis_vi_wi>>=
+@
+
+<<ls_vi_wi>>=
+@
+
+\subsubsection*{Tasseled Cap transformation}
+
+<<LS_tasseledCap>>=
+@
+
+<<MODIS_tasseledCap>>=
+@
+
+\subsubsection*{Modis VI plots}
+
+<<modis_vi_plot>>=
+@
+
+\subsubsection*{Land use Kenya}
+
+<<landuse_ken>>=
+@
+
+\subsubsection*{Exploratory movement analysis}
+
+<<expl_move>>=
+@
+
+\subsubsection*{Auto-correlation}
+
+<<variogram>>=
+@
+
+\subsubsection*{Auto-correlated kernel density estimation}
+
+<<akde_ken>>=
+@
+
+\subsubsection*{Range overlap}
+  
+<<overlap_ken>>=
+@
+
+\subsubsection*{Create absence points for BWA data}
+
+ <<absence>>=
+@
+
+\subsubsection*{Extract spatio-temporal data for absence and presence points}
+
+<<spt_modis_bwa>>=
+@
+
+<<spt_mlc_bwa>>=
+@
+
+<<spt_ls_bwa>>=
+@
+
+\subsubsection*{Space use}
+
+<<spaceuse_ken>>=
+@
+
+\subsubsection*{Connect movement data with environmental data}
+
+<<move_env_ken>>=
+@
+
+<<move_env_ssf>>=
+@
+
+\subsubsection*{Extract timeless environmental data}
+
+<<envdata>>=
+@
+
+\subsubsection*{Step selection function}
+
+<<ssf>>=
+@
+
+\end{small}
+
+\end{document}
