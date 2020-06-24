@@ -1,5 +1,5 @@
 #' R-Code - MSc Thesis 
-#' M. Biber 
+#' RS-eco
 #' January 2017
 ## ---- markdown_options ----
 
